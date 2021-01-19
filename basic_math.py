@@ -24,10 +24,7 @@ def get_greatest(number_list):
             >>> bm.get_greatest(number_list)
             99
     """
-    greatest_number = 0
-    for x in number_list:
-        if greatest_number < x:
-            greatest_number = x
+    greatest_number = max(number_list)
     
     return greatest_number
 
@@ -49,10 +46,7 @@ def get_smallest(number_list):
             >>> bm.get_smallest(number_list)
             11
     """
-    smallest_number = int(1e9)
-    for x in number_list:
-        if smallest_number > x:
-            smallest_number = x
+    smallest_number = min(number_list)
 
     return smallest_number
 
@@ -74,10 +68,7 @@ def get_mean(number_list):
             >>> bm.get_mean(number_list)
             47
     """
-    mean = 0
-    for x in number_list:
-        mean += x
-    mean / len(number_list)
+    mean = sum(number_list) / len(number_list)
     return mean
 
 
